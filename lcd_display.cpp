@@ -5,10 +5,7 @@
 
 static LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-// ==========================================
-// TẠO BỘ KÝ TỰ TIẾNG VIỆT CÓ DẤU TRÊN LCD 1602
-// ==========================================
-// 0: Ký tự độ °
+// Tạo ký tự biểu tượng độ ° (5x8 pixels)
 static byte degreeSymbol[8] = {
   B00110,
   B01001,
@@ -20,63 +17,10 @@ static byte degreeSymbol[8] = {
   B00000
 };
 
-// 1: Chữ 'Đ'
-static byte char_D[8] = {
-  B01110,
-  B01001,
-  B11110, // Dấu gạch ngang chữ Đ
-  B01001,
-  B01001,
-  B01001,
-  B01110,
-  B00000
-};
-
-// 2: Chữ 'ệ'
-static byte char_e_nang[8] = {
-  B00100, // Dấu mũ ^
-  B01110,
-  B10001,
-  B11111,
-  B10000,
-  B01110,
-  B00000,
-  B00100  // Dấu nặng .
-};
-
-// 3: Chữ 'ộ'
-static byte char_o_nang[8] = {
-  B00100, // Dấu mũ ^
-  B01110,
-  B10001,
-  B10001,
-  B10001,
-  B01110,
-  B00000,
-  B00100  // Dấu nặng .
-};
-
-// 4: Chữ 'ẩ'
-static byte char_a_hoi[8] = {
-  B01100, // Dấu hỏi/mũ
-  B00000,
-  B01110,
-  B00001,
-  B01111,
-  B10001,
-  B01111,
-  B00000
-};
-
 void initLCD() {
   lcd.init();
   lcd.backlight();
-  // Nạp 5 ký tự tự tạo vào bộ nhớ CGRAM của LCD
-  lcd.createChar(0, degreeSymbol); // 0: °
-  lcd.createChar(1, char_D);        // 1: Đ
-  lcd.createChar(2, char_e_nang);   // 2: ệ
-  lcd.createChar(3, char_o_nang);   // 3: ộ
-  lcd.createChar(4, char_a_hoi);    // 4: ẩ
+  lcd.createChar(0, degreeSymbol); // 0: ký tự độ °
 }
 
 void showSplashScreen() {
@@ -89,25 +33,16 @@ void showSplashScreen() {
 }
 
 void updateLCD(float tempC, int moisturePercent) {
-  // Dòng 0: Hiển thị tiếng Việt có dấu "Nhiệt Độ: XX.X°C" (vừa khít 16 ký tự)
+  // Dòng 0: Nhiệt độ tiếng Việt không dấu (vừa khít 16 ô: "Nhiet do: 28.5°C")
   lcd.setCursor(0, 0);
-  lcd.print("Nhi");
-  lcd.write(byte(2)); // ệ
-  lcd.print("t ");
-  lcd.write(byte(1)); // Đ
-  lcd.write(byte(3)); // ộ
-  lcd.print(": ");
-  lcd.print(tempC, 1);
-  lcd.write(byte(0)); // °
+  lcd.print("Nhiet do: ");
+  lcd.print(tempC, 1); // 1 chữ số thập phân
+  lcd.write(byte(0));  // Ký tự độ °
   lcd.print("C");
 
-  // Dòng 1: Hiển thị tiếng Việt có dấu "Độ ẩm: YY%"
+  // Dòng 1: Độ ẩm đất tiếng Việt không dấu ("Do am: 65%      ")
   lcd.setCursor(0, 1);
-  lcd.write(byte(1)); // Đ
-  lcd.write(byte(3)); // ộ
-  lcd.print(" ");
-  lcd.write(byte(4)); // ẩ
-  lcd.print("m: ");
+  lcd.print("Do am: ");
   lcd.print(moisturePercent);
   lcd.print("%    ");
 }
