@@ -1,6 +1,6 @@
 # DỰ ÁN STEM: HỆ THỐNG GIÁM SÁT & ĐIỀU KHIỂN NÔNG NGHIỆP THÔNG MINH
 **Lớp:** 9/13  
-**Học sinh / Nhóm thực hiện:** Nguyễn Văn Ba  
+**Học sinh / Nhóm thực hiện:** Nguyễn Văn Bá  
 **Mã nguồn:** [`stem_9A13.ino`](stem_9A13.ino)  
 **Lưu đồ hoạt động:** Chi tiết xem tại [`WORKFLOW.md`](WORKFLOW.md)  
 **Sơ đồ khối hệ thống:** Chi tiết xem tại [`BLOCK_DIAGRAM.md`](BLOCK_DIAGRAM.md)

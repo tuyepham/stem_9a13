@@ -1,7 +1,7 @@
 # SƠ ĐỒ KHỐI HỆ THỐNG (SYSTEM BLOCK DIAGRAM)
 **Dự án STEM:** Hệ thống giám sát & Điều khiển Nông nghiệp thông minh  
 **Lớp:** 9/13  
-**Học sinh / Nhóm thực hiện:** Nguyễn Văn Ba  
+**Học sinh / Nhóm thực hiện:** Nguyễn Văn Bá  
 **Mã nguồn liên quan:** [`stem_9A13.ino`](stem_9A13.ino)
 
 ---
