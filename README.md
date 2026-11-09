@@ -9,7 +9,7 @@
 
 ## 1. Giới thiệu dự án
 Dự án ứng dụng vi điều khiển Arduino để tự động thu thập thông số môi trường và điều khiển các cơ cấu chấp hành:
-- **Cảm biến nhiệt độ (DS18B20):** Đo nhiệt độ môi trường / nước.
+- **Cảm biến nhiệt độ (DS18B20):** Đo nhiệt độ môi trường (không đo nước).
 - **Cảm biến độ ẩm đất:** Đo độ ẩm đất, chuyển đổi điện áp mV sang % độ ẩm ($0 - 100\%$).
 - **2 Cảm biến mực nước:** Theo dõi mức nước trong 2 bồn chứa.
 - **3 Máy bơm & 1 Quạt:** Điều khiển bơm tưới tiêu, cấp thoát nước và quạt thông gió làm mát.

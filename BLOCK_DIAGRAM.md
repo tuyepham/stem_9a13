@@ -85,7 +85,7 @@ flowchart LR
 ### 2.3. Khối cảm biến (Sensors - Inputs)
 | Tên cảm biến | Chân kết nối | Chuẩn giao tiếp | Vai trò |
 |:---|:---:|:---:|:---|
-| **DS18B20** | **D2** | 1-Wire | Đo nhiệt độ môi trường / nước với độ chính xác cao |
+| **DS18B20** | **D2** | 1-Wire | Đo nhiệt độ môi trường (không đo nước) với độ chính xác cao |
 | **Soil Moisture Sensor** | **A0** | Analog ($0 - 5\text{V}$) | Đo độ ẩm đất qua điện trở tiếp xúc ($680 - 2189\text{ mV}$) |
 | **Water Level Sensor 1** | **D5** | Digital (0 / 1) | Giám sát mức nước bồn 1 (`0`: Đầy, `1`: Cạn) |
 | **Water Level Sensor 2** | **D6** | Digital (0 / 1) | Giám sát mức nước bồn 2 (`0`: Đầy, `1`: Cạn) |
