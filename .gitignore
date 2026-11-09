@@ -1,0 +1,7 @@
+# Arduino temporary & build files
+*.hex
+*.bin
+*.elf
+*.o
+.vscode/
+.idea/
