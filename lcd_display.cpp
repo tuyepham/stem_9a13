@@ -6,16 +6,8 @@
 static LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 // Tạo ký tự biểu tượng độ ° (5x8 pixels)
-static byte degreeSymbol[8] = {
-  B00110,
-  B01001,
-  B01001,
-  B00110,
-  B00000,
-  B00000,
-  B00000,
-  B00000
-};
+static byte degreeSymbol[8] = {B00110, B01001, B01001, B00110,
+                               B00000, B00000, B00000, B00000};
 
 void initLCD() {
   lcd.init();
@@ -42,7 +34,7 @@ void updateLCD(float tempC, int moisturePercent) {
 
   // Dòng 1: Độ ẩm đất tiếng Việt không dấu ("Do am: 65%      ")
   lcd.setCursor(0, 1);
-  lcd.print("Do am: ");
+  lcd.print("Do am   : ");
   lcd.print(moisturePercent);
   lcd.print("%    ");
 }

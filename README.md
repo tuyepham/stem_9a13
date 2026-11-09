@@ -2,7 +2,8 @@
 **Lớp:** 9/13  
 **Học sinh / Nhóm thực hiện:** Nguyễn Văn Ba  
 **Mã nguồn:** [`stem_9A13.ino`](stem_9A13.ino)  
-**Lưu đồ hoạt động:** Chi tiết xem tại [`WORKFLOW.md`](WORKFLOW.md)
+**Lưu đồ hoạt động:** Chi tiết xem tại [`WORKFLOW.md`](WORKFLOW.md)  
+**Sơ đồ khối hệ thống:** Chi tiết xem tại [`BLOCK_DIAGRAM.md`](BLOCK_DIAGRAM.md)
 
 ---
 
@@ -10,8 +11,9 @@
 Dự án ứng dụng vi điều khiển Arduino để tự động thu thập thông số môi trường và điều khiển các cơ cấu chấp hành:
 - **Cảm biến nhiệt độ (DS18B20):** Đo nhiệt độ môi trường / nước.
 - **Cảm biến độ ẩm đất:** Đo độ ẩm đất, chuyển đổi điện áp mV sang % độ ẩm ($0 - 100\%$).
-- **3 Cảm biến mực nước:** Theo dõi các mức nước trong bình chứa / khay trồng.
+- **2 Cảm biến mực nước:** Theo dõi mức nước trong 2 bồn chứa.
 - **3 Máy bơm & 1 Quạt:** Điều khiển bơm tưới tiêu, cấp thoát nước và quạt thông gió làm mát.
+- **Còi báo động (Buzzer):** Cảnh báo âm thanh khi quá nhiệt, cạn nước bồn hoặc đất quá khô.
 - **Giao diện hiển thị:** Màn hình LCD 16x2 (I2C) và cổng Serial Monitor (9600 baud).
 
 ---
