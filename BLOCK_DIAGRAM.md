@@ -126,3 +126,4 @@ flowchart LR
   ├── Nhiệt độ > 35°C  ──► Kích Quạt làm mát
   └── Có bất kỳ sự cố ──► Kêu Còi Buzzer cảnh báo
 ```
+
